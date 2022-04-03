@@ -30,12 +30,20 @@ Since the project is not yet approved by PlanetWatch Company, the software is ba
 If you still want to install this tool, just run clone the repository and run the following commands:
 ```sh
 npm install
-npm start
+npm prepare
+npm serve
 ```
 
-If you want to create a standalone version of Awair-uploader, run the following commands:
+Tested on RPI 4 (aarch64) and amd64. 
+
+# Docker
+Build the image
 ```sh
-npm run make
+docker build -t 'awair-uploader' . 
+```
+Run the image
+```sh
+docker run -d --name awair-uploader-node --restart always -p 8080:8080 awair-uploader
 ```
 
 ## Contributing
