@@ -47,6 +47,8 @@ class Authorization {
     this.keycloak?.logout();
   };
 
+  refreshToken = async () => this.keycloak!.updateToken(60);
+
 }
 
 export type AuthorizationProviderProps = {
