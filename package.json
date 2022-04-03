@@ -10,7 +10,7 @@
   "scripts": {
     "build": "parcel build",
     "self-cert": "npx self-cert generate -n 127.0.0.1 dist/server",
-    "serve": "npx http-server -gb -d false -S -C ./dist/server.cert -K ./dist/server.key ./dist",
+    "serve": "npx http-server --cors -gb -d false -S -C ./dist/server.cert -K ./dist/server.key ./dist",
     "prepare": "run-s \"build\" \"self-cert\"",
     "lint": "eslint --ext .ts,.tsx ."
   },
