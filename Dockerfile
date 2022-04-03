@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 COPY *.json ./
 COPY src/ ./src
 
+RUN apk update --no-cache && apk add gcc g++ make python3
+
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
